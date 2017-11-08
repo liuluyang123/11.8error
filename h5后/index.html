@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>哈哈哈太</title>
+    <!--<script src="node_modules/jquery/dist/jquery.js"></script>-->
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css"/>-->
+    <!--<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>-->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+    <!-- include summernote css/js-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+    <link href="dashboard.css" rel="stylesheet">
+    <script src="jQuey/jquery-3.1.1.min.js"></script>
+    <script src="js/index-2.js"></script>
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <!--<ul class="nav nav-sidebar" id="myTab">-->
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a href="#home" data-toggle="tab">Overview742</a></li>
+                <li><a href="#ios" data-toggle="tab">Reports</a></li>
+                <li><a href="#Java" data-toggle="tab">Another nav item</a></li>
+                <li><a href="#Export" data-toggle="tab">ExportMore </a></li>
+                <li><a href="#Nav" data-toggle="tab">Nav item</a></li>
+                <li><a href="#again" data-toggle="tab">Nav item again</a></li>
+            </ul>
+
+            <ul class="nav nav-sidebar">
+
+                <li><a href="">One more nav</a></li>
+                <li><a href="">Another nav item</a></li>
+                <li><a href="">More navigation</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">Nav item again</a></li>
+                <li><a href="">One more nav</a></li>
+                <li><a href="">Another nav item</a></li>
+            </ul>
+        </div>
+        </div>
+
+
+        <div id="myTabContent" class="tab-content">
+
+            <div class="tab-pane fade in active" id="home">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  >
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" id="img-btn">新增</button>
+
+                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+
+
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="biao">标题</label>
+                                            <input type="text" class="form-control" id="biao" placeholder="标题">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nei">内容</label>
+                                            <input type="text" class="form-control" id="nei" placeholder="内容">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="img">图片</label>
+                                            <input id="img" type="file" onchange="getFiles(this)" name="file">
+                                        </div>
+                                        <!--<div class="form-group">-->
+                                        <!--<label for="exampleInputFile">File input</label>-->
+                                        <!--<input type="file" id="exampleInputFile">-->
+                                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                                        <!--</div>-->
+                                        <!--<div class="checkbox">-->
+                                        <!--<label>-->
+                                        <!--<input type="checkbox"> Check me out-->
+                                        <!--</label>-->
+                                        <!--</div>-->
+                                        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+                                    </form>
+
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" id="tu1">Save changes</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="sub-header">Section title</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>标题</th>
+                                <th>内容</th>
+                                <th>图片</th>
+
+                            </tr>
+                            </thead>
+                            <tbody id="tu-main">
+                            <!--<tr>-->
+                            <!--<td>1,001</td>-->
+                            <!--<td>Lorem</td>-->
+                            <!--<td>ipsum</td>-->
+                            <!--<td>dolor</td>-->
+                            <!--<td>sit</td>-->
+                            <!--</tr>-->
+                            </tbody>
+                        </table>
+
+
+
+
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="recipient-name" class="control-label">标题:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="form-group1">
+                                                <label for="recipient-name" class="control-label">作者:</label>
+                                                <input type="text" class="form-control" id="recipient-name1">
+                                            </div>
+                                            <div id="summernote1">Hello Summernote</div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="btn2">Send message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+        </div>
+
+            <div class="tab-pane fade" id="ios">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  >
+                    2222222222222222222
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="Java">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  >
+                    333333333333333333333
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="Export">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  >
+                    44444444444444444
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="Nav">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  >
+                    5555555555555555555555
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="again">
+                <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"  >
+                    66666666666666666666666
+                </div>
+            </div>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
